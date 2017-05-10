@@ -1,15 +1,15 @@
 {
-  "name": "joi-router-swagger-docs",
+  "name": "koa-swagger-ui",
   "version": "0.1.0",
   "description": "Swagger doc generator for koa-joi-router",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Paul.42@gmail.com",
+  "author": "Willin Wang<willin@willin.org>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/paul42/joi-router-swagger-docs.git"
+    "url": "https://github.com/AirDwing/koa-swagger-ui.git"
   },
   "license": "MIT",
   "dependencies": {
@@ -21,6 +21,6 @@
   },
   "devDependencies": {
     "koa-joi-router": "^4.0.0",
-    "mocha": "3.1.2"
+    "mocha": "^3.1.2"
   }
 }
