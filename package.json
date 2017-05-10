@@ -17,10 +17,7 @@
     "joi-to-json-schema": "^2.5.0",
     "joi-to-swagger": "^1.1.0",
     "lodash": "^4.15.0",
-    "path-to-regexp": "^1.5.3"
-  },
-  "devDependencies": {
-    "koa-joi-router": "^4.0.0",
-    "mocha": "^3.1.2"
+    "path-to-regexp": "^1.5.3",
+    "swagger-ui": "^2"
   }
 }
