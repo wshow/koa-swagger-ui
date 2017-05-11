@@ -56,9 +56,9 @@ path-to-regexp@^1.5.3:
   dependencies:
     isarray "0.0.1"
 
-swagger-ui@^2:
-  version "2.2.10"
-  resolved "https://registry.yarnpkg.com/swagger-ui/-/swagger-ui-2.2.10.tgz#b25e7a21664e5d90bf391db30db08de41e852d7b"
+swagger-ui-dist@3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-3.0.8.tgz#80106e668b06965d42859417a27516006e1d4498"
 
 topo@2.x.x:
   version "2.0.2"
