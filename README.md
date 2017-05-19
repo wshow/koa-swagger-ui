@@ -31,17 +31,15 @@ router.get('/demo',{
       ctx.status = 200;
       ctx.body = {status: 1, msg: 'hello world'};
     },
-    meta: {
-      swagger: {
-        tags: ['demo'],
-        responses: {
-          200: {
-            description: '查询域名',
-            schema: joi.object({
-              status: joi.number().integer().default(1),
-              server: joi.string().default('js.cool')
-            }).label('serverSuccess')
-          }
+    swagger: {
+      tags: ['demo'],
+      responses: {
+        200: {
+          description: '查询域名',
+          schema: joi.object({
+            status: joi.number().integer().default(1),
+            server: joi.string().default('js.cool')
+          }).label('serverSuccess')
         }
       }
     }
@@ -67,13 +65,12 @@ router.get('/signup', {
 });
 
 router.get('/about/:versionId', {
-  meta: {
-    swagger: {
-      description: 'Anything in meta.swagger is passed directly onto the swagger object for that path',
-      parameters: [
-        {name: 'versionId', in: 'path', description: 'this is a good way to get other items onto swagger object.'}
-      ]}
-  }
+  swagger: {
+    description: 'Anything in swagger is passed directly onto the swagger object for that path',
+    parameters: [
+      {name: 'versionId', in: 'path', description: 'this is a good way to get other items onto swagger object.'}
+    ]
+  },
   handler: function*() {
     // ...
   }
