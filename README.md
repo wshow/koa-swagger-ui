@@ -1,27 +1,16 @@
-# joi-router-swagger-docs
-
-# note from new maintainer
-I'm sort of forking this for my own use - I will help out if there are issues, but most of this will not be very helpful.
+# koa-swagger-ui
 
 Still missing:
-- convert route outputs into swagger
-- finish converting from joi-to-json-schema to [joi-to-swagger](https://github.com/ChiperSoft/joi-to-swagger) (there's no npm link, but there is a github link)
-- make tests to demonstrate
-- find out why swagger-cli throws validate errors on anything I create.
+- [x] convert route outputs into swagger
+- [ ] finish converting from joi-to-json-schema to [joi-to-swagger](https://github.com/ChiperSoft/joi-to-swagger) (there's no npm link, but there is a github link)
+- [ ] make tests to demonstrate
+- [ ] find out why swagger-cli throws validate errors on anything I create.
 
 
 
 A node module for generating [Swagger 2.0](http://swagger.io/) JSON
 definitions from existing [koa-joi-router](https://github.com/koajs/joi-router)
 routes.
-
-Aiming to be a replacement for
-[koa-resourcer-docs](https://github.com/koajs/resourcer-docs) which can
-take advantage of various Swagger 2.0 tools for generating client libraries,
-test suites, AWS Lambda/serverless, etc.
-
-This is very WIP (many things missing or broken), and thus is not available
-on npm yet.
 
 ## Example
 
@@ -31,6 +20,32 @@ const SwaggerAPI = require('joi-router-swagger-docs').SwaggerAPI;
 const Router = require('koa-joi-router');
 const Joi = Router.Joi;
 const router = router();
+
+router.get('/demo',{
+   validate: {
+      query: {
+        name: joi.string().max(100).description('new user name')
+      }
+    },
+    handler: async (ctx) => {
+      ctx.status = 200;
+      ctx.body = {status: 1, msg: 'hello world'};
+    },
+    meta: {
+      swagger: {
+        tags: ['demo'],
+        responses: {
+          200: {
+            description: '查询域名',
+            schema: joi.object({
+              status: joi.number().integer().default(1),
+              server: joi.string().default('js.cool')
+            }).label('serverSuccess')
+          }
+        }
+      }
+    }
+  });
 
 router.get('/signup', {
   validate: {
