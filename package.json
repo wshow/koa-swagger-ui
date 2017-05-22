@@ -1,6 +1,6 @@
 {
   "name": "koa-swagger-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Swagger doc generator for koa-joi-router",
   "main": "index.js",
   "scripts": {
