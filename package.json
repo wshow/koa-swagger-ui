@@ -1,6 +1,6 @@
 {
   "name": "koa-swagger-ui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Swagger doc generator for koa-joi-router",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,13 @@
     "lodash": "^4.15.0",
     "path-to-regexp": "^1.5.3",
     "swagger-ui-dist": "3.0.8 || ^3.0.10"
+  },
+  "devDependencies": {
+    "debug": "^2.6.6",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.0.0"
   }
 }
