@@ -1182,9 +1182,9 @@ supports-color@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/supports-color/download/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
 
-"swagger-ui-dist@3.0.8 || ^3.0.10":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-3.0.8.tgz#80106e668b06965d42859417a27516006e1d4498"
+swagger-ui-dist@^3.0.14:
+  version "3.0.14"
+  resolved "http://registry.npm.taobao.org/swagger-ui-dist/download/swagger-ui-dist-3.0.14.tgz#02917218556eb6e75adade24ed3f1f43f0e2b704"
 
 table@^3.7.8:
   version "3.8.3"
