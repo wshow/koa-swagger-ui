@@ -1,2 +1,4 @@
 root: true
 extends: willin
+rules:
+  no-param-reassign: 0
